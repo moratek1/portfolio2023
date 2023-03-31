@@ -5,12 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+
     <title>mrt - Clients</title>
     <style>
         body {
             font-family: 'Delicious Handrawn', cursive;
             margin: 0;
             padding: 0;
+            background-color: #393A3C;
         }
 
         header {
@@ -41,10 +44,10 @@
             text-decoration: none;
             color: inherit;
         }
-
+      
         .clients-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 25%);
             grid-gap: 1rem;
             justify-content: center;
             padding: 1rem;
@@ -52,9 +55,24 @@
 
         .client-container {
             position: relative;
+            overflow: hidden;
             width: 100%;
             padding-top: 100%;
             overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+            margin: 0 auto;
+        }
+
+        .client-container:hover {
+            transform: scale(1.05);
+        }
+
+        #clients h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin: 1rem 0;
+            color: #ffffff;
         }
 
         .client-container img {
@@ -84,6 +102,7 @@
             transition: opacity 0.3s;
             font-size: 1.5rem;
             color: white;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         .client-container:hover .subscriber-count {
@@ -108,20 +127,33 @@
         </nav>
     </header>
     <section id="clients">
-        <h2 style="text-align: center;">Clients I've worked with</h2>
+        <h2 style="text-align: center;">Clients I've worked with in the past</h2>
         <div class="clients-grid">
             <div class="client-container">
-                <img src="path/to/client1-profile-pic.jpg" alt="Client 1">
-                <div class="subscriber-count">100k</div>
+                <a href="https://www.youtube.com/channel/CLIENT1_CHANNEL_ID" target="_blank">
+                    <img src="https://yt3.googleusercontent.com/DEedrCNamUl--xarPcfY1lG98p9WmrcgUaeRZCJvnId_L3SAjQGStZimaG0ZtovwG6LaNcBujA=s176-c-k-c0x00ffffff-no-rj" alt="Client 1">
+                    <div class="subscriber-count">100k+</div>
+                </a>
             </div>
             <div class="client-container">
-                <img src="path/to/client2-profile-pic.jpg" alt="Client 2">
-                <div class="subscriber-count">200k</div>
+                <a href="https://www.youtube.com/channel/CLIENT2_CHANNEL_ID" target="_blank">
+                    <img src="https://yt3.googleusercontent.com/orAw2FN3rcZb_2Prfqlk8bzU87JGFKz9XJ0NvgzMPZWk2PtU9AqQXRmqbHvlzISIbeejG4XR=s176-c-k-c0x00ffffff-no-rj" alt="Client 2">
+                    <div class="subscriber-count">25k+</div>
+                </a>
             </div>
             <div class="client-container">
-                <img src="path/to/client3-profile-pic.jpg" alt="Client 3">
-                <div class="subscriber-count">150k</div>
+                <a href="https://www.youtube.com/channel/CLIENT3_CHANNEL_ID" target="_blank">
+                    <img src="https://yt3.googleusercontent.com/grXm0EUrio5-VqVCiOW7g399K80zfztnETHajR9gGMGBRZpB15siGTEzT1K0612JmoTxLV-lIkI=s176-c-k-c0x00ffffff-no-rj" alt="Client 3">
+                    <div class="subscriber-count">500+</div>
+                </a>
             </div>
+            <div class="client-container">
+                <a href="https://www.youtube.com/channel/CLIENT4_CHANNEL_ID" target="_blank">
+                    <img src="https://yt3.googleusercontent.com/m8hgFMbX_Ip_oUqSknPCmzQ-mgTZhHydnuOg8hc9606SqXM_An2DAhg-KGSAQaOtQhyyLewAEg=s176-c-k-c0x00ffffff-no-rj" alt="Client 4">
+                    <div class="subscriber-count">2k+</div>
+                </a>
+            </div>
+            <!-- Add more client-container divs here -->
         </div>
     </section>
 </body>
