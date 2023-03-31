@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
-    <title>Video Editor Portfolio</title>
+    <title>mrt - video editing</title>
     <style>
         body {
             font-family: 'Delicious Handrawn', cursive;
@@ -89,20 +89,68 @@
             border: none;
             border-radius: 5px;
         }
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 1rem;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .client-container {
+            position: relative;
+            width: 100%;
+            padding-top: 100%;
+            overflow: hidden;
+        }
+
+        .client-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .client-container:hover img {
+            opacity: 0.5;
+        }
+
+        .client-container .subscriber-count {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .client-container:hover .subscriber-count {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1 id="logo">mrt</h1>
-        <nav>
-            <ul>
-                <li><a href="#">SHOWCASE</a></li>
-                <li><a href="#">PRICES</a></li>
-                <li><a href="#">CLIENTS</a></li>
-            </ul>
-        </nav>
+          <nav>
+              <ul>
+                  <li><a href="index.html">SHOWCASE</a></li>
+                  <li><a href="clients.html">CLIENTS</a></li>
+                  <li><a href="contact.html">CONTACT</a></li>
+              </ul>
+          </nav>
     </header>
-    <section id="showcase">
+  
+<section id="showcase">
         <div class="video-grid">
           <div class="video-container">
               <iframe src="https://www.youtube.com/embed/RlPXGfZkPOo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -159,24 +207,11 @@
               <iframe src="https://www.youtube.com/embed/Sbb367y5nsY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/ClrCExmqeIY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/juc2801Ad4Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="video-container">
               <iframe src="https://www.youtube.com/embed/tfSbbTgbO1o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
         </div>
-    </section>
-    <footer>
-        <h2>Contact Me</h2>
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </footer>
 </body>
 </html>
