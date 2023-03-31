@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
-    <title>Video Editor Portfolio</title>
+    <title>mrt - Clients</title>
     <style>
         body {
             font-family: 'Delicious Handrawn', cursive;
@@ -42,52 +42,57 @@
             color: inherit;
         }
 
-        .video-grid {
+        .clients-grid {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             grid-gap: 1rem;
+            justify-content: center;
             padding: 1rem;
-            background-color: #393A3C;
         }
 
-        .video-container {
+        .client-container {
             position: relative;
             width: 100%;
-            padding-top: 56.25%; /* 16:9 aspect ratio */
+            padding-top: 100%;
             overflow: hidden;
         }
 
-        .video-container iframe {
+        .client-container img {
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
+            object-fit: cover;
+            transition: opacity 0.3s;
+        }
+
+        .client-container:hover img {
+            opacity: 0.5;
+        }
+
+        .client-container .subscriber-count {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .client-container:hover .subscriber-count {
+            opacity: 1;
         }
 
         footer {
             padding: 1rem;
             background-color: #A4B28C;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        form label,
-        form input,
-        form textarea {
-            margin-bottom: 1rem;
-        }
-
-        form button {
-            cursor: pointer;
-            padding: 0.5rem;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
         }
     </style>
 </head>
@@ -96,87 +101,28 @@
         <h1 id="logo">mrt</h1>
         <nav>
             <ul>
-                <li><a href="#">SHOWCASE</a></li>
-                <li><a href="#">PRICES</a></li>
-                <li><a href="#">CLIENTS</a></li>
+                <li><a href="index.html">SHOWCASE</a></li>
+                <li><a href="clients.html">CLIENTS</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
             </ul>
         </nav>
     </header>
-    <section id="showcase">
-        <div class="video-grid">
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/RlPXGfZkPOo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/yu9JuLOpnBE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/eAkeIlhCk20" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/f_gqaEFHn1Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/NBoqtIO54Us" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/wwXGLbXj6U4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/y0abwvSpm-k" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/hTO8u-NcuSU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/LCZJmLkzmcs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/l2JP8AGCduU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/yDnV8VpLVmY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/u4pngfwtilo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/18vwOpR0MqE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/v7P8kmduLLg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/nraPB63f0Y4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/oOmOcmA0D_Q" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/wsoWn2QTORk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/Sbb367y5nsY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/ClrCExmqeIY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
-          <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/tfSbbTgbO1o" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-          </div>
+    <section id="clients">
+        <h2 style="text-align: center;">Clients I've worked with</h2>
+        <div class="clients-grid">
+            <div class="client-container">
+                <img src="path/to/client1-profile-pic.jpg" alt="Client 1">
+                <div class="subscriber-count">100k</div>
+            </div>
+            <div class="client-container">
+                <img src="path/to/client2-profile-pic.jpg" alt="Client 2">
+                <div class="subscriber-count">200k</div>
+            </div>
+            <div class="client-container">
+                <img src="path/to/client3-profile-pic.jpg" alt="Client 3">
+                <div class="subscriber-count">150k</div>
+            </div>
         </div>
     </section>
-    <footer>
-        <h2>Contact Me</h2>
-        <form action="#" method="POST" class="contact-form">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-    </footer>
 </body>
 </html>
