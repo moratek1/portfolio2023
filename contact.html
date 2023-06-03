@@ -47,28 +47,49 @@
 
         #quote {
             padding: 2rem;
-            font-size: 3rem;
+            font-size: 2rem;
             background-color: #333;
             color: #fff;
             text-align: center;
             line-height: 1.5;
             margin-bottom: 1rem;
+            font-family: 'Ubuntu', sans-serif;
         }
 
         #email {
             margin-top: 2rem;
             margin-bottom: 2rem;
-            font-size: 5rem;
+            font-size: 4rem;
             text-align: center;
             color: #fff;
             font-family: 'Ubuntu', sans-serif;
+            transition: color 0.3s ease;
+            cursor: pointer;
         }
-
+      
+        #email:hover {
+            color: #A4B28C;
+        }
+      
         footer {
             padding: 1rem;
             background-color: #A4B28C;
         }
     </style>
+    <script>
+        function copyToClipboard() {
+            var emailText = document.getElementById('email');
+            var range = document.createRange();
+            range.selectNode(emailText);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+
+            // Notify user
+            alert('Email copied to clipboard!');
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -85,7 +106,7 @@
         <div id="quote">
             "I am able to adapt to various styles and prioritize high-quality, timely content."
         </div>
-        <div id="email">
+        <div id="email" onclick="copyToClipboard()">
             contact@mrtvideoediting.com
         </div>
         <div id="quote">
